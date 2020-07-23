@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:input="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,18 +9,36 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="results.html" method="get">
+    <form action="results.html" method="get" enctype="multipart/form-data">
         <div>
             <label for="name">name:</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" required>
 
         </div>
         <div>
             <label for="email">email:</label>
             <label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
             </label>
         </div>
+
+        <div>
+            <label for="age">age:</label>
+            <input type="number" name="age" id="age" min="1" max="200" required>
+        </div>
+
+        <div>
+            <h2>favorite food</h2>
+            <label for="banana">bananas</label>
+            <input type="checkbox" name="banana" id="banana">
+
+            <label for="apple">apples</label>
+            <input type="checkbox" name="apple" id="apple">
+
+        </div>
+
+        <label for="file">file:</label>
+        <input type="file" name="file" id="file">
 
         <div>
             <button type="submit">submit info</button>
